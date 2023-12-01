@@ -32,12 +32,11 @@ if __name__ == "__main__":
                 if result:
                     value = result * 10
                     break
-            for i in range(len(line), -1, -1):
+            for i in range(len(line), -1, -1): # stop is exclusive!
                 result = find_digit_at_index(line, i)
                 if result:
                     value += result
                     break
-            print(line, value)
             NUMBERS.append(value)
 
     result = 0
