@@ -11,7 +11,7 @@ if __name__ == "__main__":
             value = 0
             for char in line:
                 if char.isdigit():
-                    value = int(char)*10
+                    value = int(char) * 10
                     break
             for char in line[::-1]:
                 if char.isdigit():
@@ -22,7 +22,7 @@ if __name__ == "__main__":
     result = 0
     for value in NUMBERS:
         result += value
-    
+
     print(result)
     end_time = perf_counter()
     print(f"Execution time: {end_time-start_time:.3f}s")

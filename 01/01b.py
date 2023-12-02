@@ -2,8 +2,9 @@ from time import perf_counter
 
 IN_FILE = "01/input.txt"
 
-STRINGS = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
+STRINGS = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
 NUMBERS = []
+
 
 def find_digit_at_index(string, index):
     substring = string[index:]
@@ -16,9 +17,10 @@ def find_digit_at_index(string, index):
         check_length = len(STRINGS[i])
         if len(string[index:]) < check_length:
             continue
-        if string[index:index+check_length] == STRINGS[i]: 
-            return i+1
+        if string[index : index + check_length] == STRINGS[i]:
+            return i + 1
     return None
+
 
 if __name__ == "__main__":
     start_time = perf_counter()
@@ -32,7 +34,7 @@ if __name__ == "__main__":
                 if result:
                     value = result * 10
                     break
-            for i in range(len(line), -1, -1): # stop is exclusive!
+            for i in range(len(line), -1, -1):  # stop is exclusive!
                 result = find_digit_at_index(line, i)
                 if result:
                     value += result
@@ -42,7 +44,7 @@ if __name__ == "__main__":
     result = 0
     for value in NUMBERS:
         result += value
-    
+
     print(result)
     end_time = perf_counter()
     print(f"Execution time: {end_time-start_time:.3f}s")
