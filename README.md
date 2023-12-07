@@ -11,6 +11,7 @@ Collection of my solutions for Advent of Code 2023. Unless I feel like doing som
 | 3    | Dec 3, 11:12p  | 0.052s | 0.042s   |  |
 | 4    | Dec 4, 10:07a  | 0.001s | 1.632s   |  |
 | 5    |                | 0.005s |          |  |
+| 6    | Dec 7, 3:22p   | 0.004s | 0.001s   |  |
 
 
 Completion/refactor timestamps `tz=America/Toronto`. Execution times in *italics* indicate a significant improvement from refactoring after the puzzle was completed and submitted.
