@@ -8,13 +8,13 @@ EXPAND_DISTANCE = 1000000
 # rather than expanding lists, add the extra space in distance calculations
 def manhattan_distance(start, end, empty_rows, empty_columns):
     distance = abs(start[0] - end[0])
-    for i in range(min(start[0], end[0]), max(start[0] + 1, end[0])):
+    for i in range(min(start[0], end[0]), max(start[0], end[0])):
         if i in empty_columns:
             distance += EXPAND_DISTANCE - 1
 
     distance += abs(start[1] - end[1])
 
-    for i in range(min(start[1], end[1]), max(start[1] + 1, end[1])):
+    for i in range(min(start[1], end[1]), max(start[1], end[1])):
         if i in empty_rows:
             distance += EXPAND_DISTANCE - 1
     return distance
